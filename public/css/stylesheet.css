@@ -1,3 +1,9 @@
 #name-heading {
   font-size: 100px !important;
 }
+.alpha {
+  display: inline-block;
+}
+#name-heading {
+  letter-spacing: 1;
+}
