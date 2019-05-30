@@ -2,8 +2,8 @@
 const nameAnim = anime({
   targets: '#name-heading',
   translateX: 250,
-  //rotate: '1turn',
-  duration: 800,
-  loop: true
+  //rotate: '2turn',
+  duration: 10000,
+  loop: false
 });
 
