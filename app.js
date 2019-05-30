@@ -8,6 +8,5 @@ app.get('/', function(req, res) {
 });
 
 // Loads all the files in public directory which can be easily referenced and added.
-app.use('/',express.static(path.join(__dirname, 'public')));
-
+app.use('/public', express.static(path.join(__dirname, 'public')));
 app.listen('8080');
