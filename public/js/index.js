@@ -21,8 +21,19 @@ const rotateName = {
   loop: true,
   offset: '+=100' 
 };
-nameAnim.add(moveNameLeft)
-.add(rotateName);
+
+const play = {
+  targets: '#play-button',
+  rotate: '2turn',
+  duration: 1000,
+  opacity: {
+    value: 1,
+    duration: 300,
+    easing: 'linear'
+  },
+  offset: '+=100' 
+}
+nameAnim.add(moveNameLeft).add(rotateName).add(play);
 //anime.set('.alpha', {backgroundColor: '#ff2801'})
 
 const letters = $('.alpha');

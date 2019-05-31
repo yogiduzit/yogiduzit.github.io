@@ -6,9 +6,14 @@ body {
   height: 100%;
 }
 body {
-  
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
@@ -18,10 +23,16 @@ body {
   font-size: 100px !important;
   text-align: center;
   color: white; 
+  width: 100%;
 }
 .alpha {
   display: inline-block;
 }
 a:hover {
   text-decoration: none;
+}
+#play-button {
+  width: 50px;
+  height: 50px;
+  opacity: 0;
 }
