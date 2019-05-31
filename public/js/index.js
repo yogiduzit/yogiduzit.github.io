@@ -2,7 +2,7 @@ $(document).ready(function() {
   const nameAnim = anime.timeline({
     autoplay: true
   });
-  const moveNameLeft = {
+  const moveNameRight = {
     targets: '.alpha',
     translateX: '13vmin',
     duration: 1000,
@@ -16,7 +16,7 @@ $(document).ready(function() {
     rotate: '1turn',
     duration: 1000,
     easing: 'easeInOutSine',
-    delay: anime.stagger(30),
+    delay: anime.stagger(50),
     endDelay: 400,
     loop: true,
     offset: '+=100' 
@@ -33,7 +33,7 @@ $(document).ready(function() {
     },
     offset: '+=100' 
   }
-  nameAnim.add(moveNameLeft).add(rotateName).add(play);
+  nameAnim.add(moveNameRight).add(rotateName).add(play);
   //anime.set('.alpha', {backgroundColor: '#ff2801'})
 
   const letters = $('.alpha');
