@@ -1,3 +1,27 @@
-#name-heading {
+html {
+  height: 100vh;
+}
+body {
+  margin: 0 auto;
+  height: 100%;
+}
+body {
+  
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+#username-heading {
+  text-decoration: none;
+  margin: 0 auto;
   font-size: 100px !important;
+  text-align: center;
+  color: white; 
+}
+.alpha {
+  display: inline-block;
+}
+a:hover {
+  text-decoration: none;
 }
