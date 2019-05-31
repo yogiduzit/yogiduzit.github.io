@@ -20,7 +20,7 @@ main {
 #username-heading {
   text-decoration: none;
   margin: 0 auto;
-  font-size: 100px !important;
+  font-size: 7vmax !important;
   text-align: center;
   color: white; 
   width: 100%;
