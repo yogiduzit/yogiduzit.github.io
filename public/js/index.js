@@ -24,18 +24,45 @@ $(document).ready(function() {
 
   const play = {
     targets: '#play-button',
-    rotate: '2turn',
     duration: 1000,
     opacity: {
       value: 1,
-      duration: 300,
+      duration: 1000,
       easing: 'linear'
-    },
-    offset: '+=100' 
+    }
   }
-  nameAnim.add(moveNameRight).add(rotateName).add(play);
+  nameAnim.add(moveNameRight).add(rotateName).add(play, '+=100');
   //anime.set('.alpha', {backgroundColor: '#ff2801'})
 
+  const navAnim = anime.timeline({
+    autoplay: false
+  });
+  const rotatePlayButton = {
+    targets: '#play-button',
+    rotate: '2turn',
+    duration: 3000,
+    easing: 'easeInOutSine',
+  }
+  const bringNavDown = {
+    targets: '.navlinks',
+    easing: 'easeInOutSine',
+    opacity: {
+      value: 1,
+      duration: 3000,
+      easing: 'linear'
+    },
+    translateY: {
+      value: '+=50px',
+      duration: 3000
+    },
+    duration: 3000,
+  }
+  navAnim.add(rotatePlayButton).add(bringNavDown, '-=2950');
   const letters = $('.alpha');
-
+  $('#play-button').on('click', function() {
+   navAnim.play();
+  });
 });
+
+
+
