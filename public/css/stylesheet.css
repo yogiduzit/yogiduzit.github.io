@@ -21,14 +21,14 @@ main {
   align-items: center;
   justify-content: center;
   width: 73vw;
-  height: 92vh;
-  align-self: flex-end;
+  height: 65vh;
+  align-self: center;
   flex-grow: 1;
 }
 #container {
   display: flex;
   flex-flow: row wrap;
-  height: 92vh;
+  height: 80vh;
 }
 section {
   width: 25vw;
@@ -100,13 +100,13 @@ nav {
   .show-up {
     background-color: grey; 
     height: 10%;
-    width: 80%;
+    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
-    right: 80%;
+    right: 70%;
 
   }
 }
