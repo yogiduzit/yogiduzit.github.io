@@ -1,28 +1,11 @@
 $(document).ready(function() {
+  let count = 0;
+  
+  // Play-Button fading in
   const nameAnim = anime.timeline({
+    loop: false,
     autoplay: true
   });
-  /*const moveNameRight = {
-    targets: '.alpha',
-    translateX: '11vmin',
-    duration: 1000,
-    easing: 'easeInOutSine',
-    delay: anime.stagger(30),
-    endDelay: 400
-  };
-  
-
-  const rotateName = {
-    targets: '.alpha',
-    rotate: '1turn',
-    duration: 1000,
-    easing: 'easeInOutSine',
-    delay: anime.stagger(50),
-    endDelay: 400,
-    loop: true,
-    offset: '+=100' 
-  };*/
-
   const play = {
     targets: '#play-button',
     duration: 1000,
@@ -34,6 +17,7 @@ $(document).ready(function() {
   }
   nameAnim.add(play, '+=100');
 
+  // On-Click Animation
   const navAnim = anime.timeline({
     autoplay: false
   });
@@ -42,13 +26,12 @@ $(document).ready(function() {
     rotate: '2turn',
     duration: 3000,
     easing: 'easeInOutSine',
-    top: '5vh',
   }
   const bringNavDown = {
     targets: '.navlinks',
     easing: 'easeInOutSine',
     opacity: {
-      value: 1,
+      value: [0,1],
       duration: 3000,
       easing: 'linear'
     },
@@ -59,7 +42,7 @@ $(document).ready(function() {
     duration: 3000,
   }
   const bringName = {
-    targets: '#username-heading',
+    targets: ['#username-heading', '.alpha'],
     duration: 3000,
     opacity: {
       value: 1, 
@@ -70,20 +53,31 @@ $(document).ready(function() {
   }
   const removeButton = {
     targets: '#play-button',
-    duration: 3000,
+    duration: 500,
     opacity: 0,
     easing: 'linear'
   }
+
+  const showUp = document.querySelector('.show-up');
   const getProfile = {
     targets: '.show-up',
     duration: 500,
     easing: 'linear',
-    translateX: '+=100%'
+    translateX: anime.get(showUp, 'width', 'px').toString()
   }
-  navAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getProfile, '-=500');
+
+
+  navAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getProfile, '-=500').add(removeButton);
   
+
   $('#play-button').on('click', function() {
-   navAnim.play();
+    count += 1;
+    navAnim.play();
+    
+    navAnim.finished.then(function() {
+     $('#play-button').off();
+    });
+    
   });
 });
 
