@@ -72,31 +72,32 @@ $(document).ready(function() {
 
   const getGithub = {
     targets: '#githubLink',
-    translateY: '72.88vh',
+    translateX: '25vw',
     duration: 1000,
     opacity: 1
   }
   const getEmail = {
     targets: '#email',
+    translateY: '-=40vh',
     duration: 1000,
     opacity: 1
   }
   const getLinkedIn = {
     targets: '#LinkedInLink',
-    translateY: '72.88vh',
+    translateX: '-=25vw',
     duration: 1000,
     opacity: 1
   }
 
   mobileAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getProfile, '-=500').add(removeButton);
-  desktopAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getGithub, '-=500').add(getEmail).add(getLinkedIn, '-=500').add(removeButton)
+  desktopAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getGithub, '-=500').add(getEmail).add(getLinkedIn, '-=500').add(removeButton, '-=1000')
 
 
 
 
 
   $('#play-button').on('click', function() {
-    if (window.outerWidth < 1024) {
+    if (window.outerWidth <= 1024) {
     mobileAnim.play();
     
     mobileAnim.finished.then(function() {
@@ -110,7 +111,5 @@ $(document).ready(function() {
     });
   }
   });
+
 });
-
-
-

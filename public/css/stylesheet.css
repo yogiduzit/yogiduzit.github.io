@@ -4,12 +4,12 @@
   color: white !important;
 }
 html {
-  height: 100vh;
-  overflow-x: hidden; 
+  height: 100vh; 
+  overflow: hidden;
 }
 body {
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -121,10 +121,6 @@ nav  {
     right: 70px;
     font-size: 2vw;
   }
-  #username-heading {
-    position: relative;
-    
-  }
   .alpha {
     font-size: 5vw;
   }
@@ -197,21 +193,34 @@ nav  {
     bottom: 150px;
   }
   #container {
-    flex-flow: column nowrap;
+    flex-flow: column-reverse nowrap;
+    flex: 1;
   }
   aside {
+    height: 40vh;
     width: 95vw;
     flex-flow: row wrap;
     justify-content: space-around;
   }
   main {
     width: 95vw;
-    flex: 1;
   }
   .show-up {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 1;
+  }
+  #email {
+    position: relative;
+    top: 40vh;
+  }
+  #githubLink {
+    position: relative;
+    right: 25vw;
+  }
+  #LinkedInLink {
+    position: relative;
+    left: 25vw;
   }
 }
