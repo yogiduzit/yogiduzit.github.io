@@ -4570,7 +4570,7 @@ tbody.collapse.show {
   }
 }
 
-@media (min-width:992px) {
+@media (min-width: 767px) {
   .navbar-expand-lg {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -6021,7 +6021,7 @@ button.close {
   }
 
   .modal-sm {
-    max-width: 300px
+    max-width: 300px;
   }
 }
 

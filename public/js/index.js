@@ -18,7 +18,10 @@ $(document).ready(function() {
   nameAnim.add(play, '+=100');
 
   // On-Click Animation
-  const navAnim = anime.timeline({
+  const mobileAnim = anime.timeline({
+    autoplay: false
+  });
+  const desktopAnim = anime.timeline({
     autoplay: false
   });
   const rotatePlayButton = {
@@ -27,22 +30,23 @@ $(document).ready(function() {
     duration: 3000,
     easing: 'easeInOutSine',
   }
+  const navLink = document.querySelector('nav');
   const bringNavDown = {
     targets: '.navlinks',
-    easing: 'easeInOutSine',
+    easing: 'linear',
     opacity: {
       value: [0,1],
       duration: 3000,
       easing: 'linear'
     },
     translateY: {
-      value: '+=12vh',
+      value: anime.get(navLink, 'height', 'px'),
       duration: 3000
     },
     duration: 3000,
   }
-  const bringName = {
-    targets: ['#username-heading', '.alpha'],
+    const bringName = {
+    targets: ['#username-heading', '.alpha', '#junior-dev'],
     duration: 3000,
     opacity: {
       value: 1, 
@@ -66,18 +70,45 @@ $(document).ready(function() {
     translateX: anime.get(showUp, 'width', 'px').toString()
   }
 
+  const getGithub = {
+    targets: '#githubLink',
+    translateY: '72.88vh',
+    duration: 1000,
+    opacity: 1
+  }
+  const getEmail = {
+    targets: '#email',
+    duration: 1000,
+    opacity: 1
+  }
+  const getLinkedIn = {
+    targets: '#LinkedInLink',
+    translateY: '72.88vh',
+    duration: 1000,
+    opacity: 1
+  }
 
-  navAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getProfile, '-=500').add(removeButton);
-  
+  mobileAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getProfile, '-=500').add(removeButton);
+  desktopAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getGithub, '-=500').add(getEmail).add(getLinkedIn, '-=500').add(removeButton)
+
+
+
+
 
   $('#play-button').on('click', function() {
-    count += 1;
-    navAnim.play();
+    if (window.outerWidth < 1024) {
+    mobileAnim.play();
     
-    navAnim.finished.then(function() {
+    mobileAnim.finished.then(function() {
      $('#play-button').off();
     });
+  } else {
+    desktopAnim.play();
     
+    desktopAnim.finished.then(function() {
+     $('#play-button').off();
+    });
+  }
   });
 });
 
