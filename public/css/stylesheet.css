@@ -1,16 +1,15 @@
 * {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   color: white !important;
 }
-
 html {
   height: 100vh;
   overflow-x: hidden; 
 }
 body {
   margin: 0 auto;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -21,16 +20,17 @@ main {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  width: 73vw;
+  width: 90vw;
   height: 80vh;
   align-self: center;
 }
 #container {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
   height: 80vh;
 }
-section {
+aside {
   justify-self: center;
   display: flex;
   flex-flow: column nowrap;
@@ -42,10 +42,11 @@ section {
   margin: 0 auto;
   text-align: center;
   color: white; 
-  width: 100vw;
   position: relative;
   opacity: 0;
-
+}
+#junior-dev {
+  opacity: 0;
 }
 .alpha {
   display: inline-block;
@@ -57,13 +58,9 @@ nav  {
   width: 100vw;
   z-index: 1000;
 }
-nav * {
-  z-index: 1000 !important;
-}
 .navlinks {
-  opacity: 1;
   position: relative;
-  bottom: 12vh;
+  bottom: 56px;
 }
 #play-button {
   z-index: 2;
@@ -76,21 +73,14 @@ nav * {
   position: relative;
 }
 
-
 /*Mobiles Portrait*/
 @media only screen and (min-width: 320px)  and (max-width: 479px) {
-  section {
+  aside {
     width: 25vw;
     height: 50vh;
   }
-  .navbar-toggler {
-    position: relative;
-    /*left: 12vw;*/
-  }
   #username-heading {
     font-size: 10vmin;
-    position: relative;
-    right: 15vw;
   }
   #play-button {
     width: 14vmin;
@@ -113,8 +103,8 @@ nav * {
   }
 }
 /*Mobile Landscape*/
-@media only screen and (min-width: 540px) and (max-height: 500px) and (max-width: 900px) {
-  section {
+@media only screen and (min-width: 540px) and (max-height: 479px) and (max-width: 900px) {
+  aside {
     height: 80vh;
   }
   #play-button {
@@ -122,18 +112,18 @@ nav * {
     height: 50px;
     position: relative;
     bottom: 70px;
-    right: 3vw;
+    
   }
   .show-up {
-    position: relative;
-    right: 70px;
     height: 80px;
     width: 80px;
+    position: relative;
+    right: 70px;
     font-size: 2vw;
   }
   #username-heading {
     position: relative;
-    right: 15vw;
+    
   }
   .alpha {
     font-size: 5vw;
@@ -143,17 +133,85 @@ nav * {
     width: 18vw;
     text-align: right;
   }
+  #junior-dev {
+    position: relative;
+
+  }
   .navbar-nav {
     align-items: flex-end;
   } 
 }
-/*Small Tablets portrait */
+/*Small Tablets Portrait */
 @media only screen and (min-width: 480px) and (min-height: 767px) and (max-width: 767px) {
   #play-button {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
+    position: relative;
+    bottom: 80px;
   }
   .navbar-nav {
     align-items: flex-end;
+  }
+  .show-up {
+    position: relative;
+    right: 90%;
+    height: 100px;
+    width: 100px;
+  }
+  aside {
+    height: 50vh;
+  }
+  #username-heading {
+    font-size: 5vw;
+  }
+  nav button {
+    height: 70%;
+  }
+}
+/* Big tablets portrait and Small tablets landscape */
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .show-up {
+    height: 130px;
+    width: 130px;
+    right: 90%;
+    font-size: 2em;
+  }
+  aside {
+    height: 60vh;
+  }
+  #play-button {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 100px;
+  }
+  #username-heading {
+    font-size: 4em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  #play-button {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    bottom: 150px;
+  }
+  #container {
+    flex-flow: column nowrap;
+  }
+  aside {
+    width: 95vw;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  main {
+    width: 95vw;
+    flex: 1;
+  }
+  .show-up {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    opacity: 0;
   }
 }
