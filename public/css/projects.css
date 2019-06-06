@@ -1,0 +1,95 @@
+body {
+  min-height: 100vh;
+}
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 10px;
+}
+.navbar-nav {
+  align-items: flex-end;
+}
+.about {
+  list-style: circle;
+}
+.project-name {
+  font-size: 1em;
+  text-align: center;
+}
+.project-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.desktopHead {
+  display: none;
+}
+
+@media screen and (min-width: 319px) and (max-width: 479px) {
+  .video {
+    width: 90vw;
+    height: 35vh;
+  }
+  .carousel-img {
+    width: 90vw;
+    height: 30vh;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .video {
+    width: 88vw;
+    height: 50vw;
+  }
+  .carousel-img {
+    width: 88vw;
+    height: 50vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .video {
+    width: 676px;
+    height: 384px;
+  }
+  .carousel-img {
+    width: 676px;
+    height: 384px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .video {
+    width: 792px;
+    height: 450px;
+  }
+  .carousel-img {
+    width: 792px;
+    height: 450px;
+  }
+  .container-0 {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .project-container {
+    height: 70vh;
+    width: 90vw;
+  }
+  .container-1 {
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+  }
+  #about-project {
+    display: flex;
+  }
+  .desktopHead {
+    display: block;
+  }
+  .mobileHead {
+    display: none;
+  }
+  #container {
+    padding-top: 40px;
+  }
+  section {
+    justify-content: space-around;
+  }
+}
