@@ -6,6 +6,9 @@ let app = express();
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
+app.get('/projects.html', function(req, res) {
+  res.sendFile(path.join(__dirname, 'projects.html'));
+});
 
 // Loads all the files in public directory which can be easily referenced and added.
 app.use('/public', express.static(path.join(__dirname, 'public')));
