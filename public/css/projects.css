@@ -15,8 +15,11 @@ section {
   list-style: circle;
 }
 .project-name {
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
+}
+.dates {
+  font-size: 1.2em;
 }
 .project-container {
   display: flex;
@@ -26,7 +29,12 @@ section {
 .desktopHead {
   display: none;
 }
-
+.languages {
+  list-style: none;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 2em;
+}
 @media screen and (min-width: 319px) and (max-width: 479px) {
   .video {
     width: 90vw;
@@ -83,6 +91,7 @@ section {
   }
   .desktopHead {
     display: block;
+    text-align: center;
   }
   .mobileHead {
     display: none;
@@ -92,5 +101,8 @@ section {
   }
   section {
     justify-content: space-around;
+  }
+  .project-name {
+    font-size: 2.5em;
   }
 }
