@@ -112,4 +112,8 @@ $(document).ready(function() {
   }
   });
 
+  $('#username-heading').hover(function() {
+    console.log(desktopAnim);
+  });
+
 });
