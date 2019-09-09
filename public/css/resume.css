@@ -1,0 +1,8 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+.resume-pdf {
+  height: 60vmax;
+  width: 51vmax;
+}

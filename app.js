@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 
+const PORT = 8080;
+const ADDRESS = 'localhost';
 let app = express();
 
 app.get('/', function(req, res) {
@@ -16,4 +18,4 @@ app.get('/resume.html', function(req, res) {
 
 // Loads all the files in public directory which can be easily referenced and added.
 app.use('/public', express.static(path.join(__dirname, 'public')));
-app.listen('8080');
+app.listen(PORT, ADDRESS, () => console.log(`Server listening on ${ADDRESS}:${PORT}`));
