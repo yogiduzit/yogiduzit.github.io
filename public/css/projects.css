@@ -135,7 +135,7 @@ img.carousel-img {
   }
   .video-container {
     width: 50%;
-    height: 60%;
+    height: 100%;
   }
   .video {
     width: 100%;
@@ -150,13 +150,13 @@ img.carousel-img {
   .carousel-img {
     height: 450px;
   }
-  .container-0 {
-    flex-flow: row nowrap;
-  }
   .project-container {
-    height: 70vh;
+    height: 55vh;
     width: 95vw;
-
+  }
+  .container-0 {
+    width: 95vw;
+    height: 50vw;
   }
   .container-1 {
     flex-flow: row-reverse nowrap;
