@@ -2,8 +2,12 @@ body {
   min-height: 100vh;
   background: url("../img/background.jpg") repeat;
 }
+a, a:hover {
+  text-decoration: none;
+}
 #container {
   text-align: center;
+
 }
 section.main-container {
   display: flex;
