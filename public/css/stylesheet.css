@@ -73,8 +73,19 @@ nav  {
   align-items: center;
   text-align: center;
   position: relative;
-  background: url("../img/background.jpg") repeat 1024px;
-
+  opacity: 0;
+}
+.show-up-image {
+  width: 10vmin;
+  height: 10vmin;
+}
+.github-logo {
+  width: 25vmin;
+  height: 10vmin;
+}
+.linkedin-logo {
+  width: 20.5vmin;
+  height: 5vmin;
 }
 
 /*Mobiles Portrait*/
@@ -100,11 +111,6 @@ nav  {
   .navbar-nav {
     align-items: flex-end;
   }
-  .show-up {
-    height: 25vmin;
-    width: 25vmin;
-    right: 23vmin;
-  }
 }
 /*Mobile Landscape*/
 @media only screen and (min-width: 540px) and (max-height: 479px) and (max-width: 900px) {
@@ -117,13 +123,6 @@ nav  {
     position: relative;
     bottom: 70px;
     
-  }
-  .show-up {
-    height: 80px;
-    width: 80px;
-    position: relative;
-    right: 70px;
-    font-size: 2vw;
   }
   .alpha {
     font-size: 5vw;
@@ -151,12 +150,6 @@ nav  {
   .navbar-nav {
     align-items: flex-end;
   }
-  .show-up {
-    position: relative;
-    right: 90%;
-    height: 100px;
-    width: 100px;
-  }
   aside {
     height: 50vh;
   }
@@ -169,12 +162,6 @@ nav  {
 }
 /* Big tablets portrait and Small tablets landscape */
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
-  .show-up {
-    height: 130px;
-    width: 130px;
-    right: 90%;
-    font-size: 2em;
-  }
   aside {
     height: 60vh;
   }
@@ -204,27 +191,14 @@ nav  {
     width: 95vw;
     flex-flow: row wrap;
     justify-content: space-around;
+    align-content: center;
   }
   main {
     width: 95vw;
     justify-content: flex-end;
   }
-  .show-up {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    opacity: 1;
-  }
   #email {
     position: relative;
-    top: 40vh;
-  }
-  #githubLink {
-    position: relative;
-    right: 25vw;
-  }
-  #LinkedInLink {
-    position: relative;
-    left: 25vw;
+    top: 2vh;
   }
 }

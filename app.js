@@ -8,11 +8,11 @@ let app = express();
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
-app.get('/projects.html', function(req, res) {
+app.get('/projects', function(req, res) {
   res.sendFile(path.join(__dirname, 'projects.html'));
 });
 
-app.get('/resume.html', function(req, res) {
+app.get('/resume', function(req, res) {
   res.sendFile(path.join(__dirname, 'resume.html'));
 });
 

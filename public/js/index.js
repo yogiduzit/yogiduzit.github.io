@@ -72,25 +72,25 @@ $(document).ready(function() {
 
   const getGithub = {
     targets: '#githubLink',
-    translateX: '25vw',
-    duration: 1000,
+    translateX: '2vw',
+    duration: 6000,
     opacity: 1
   }
   const getEmail = {
     targets: '#email',
-    translateY: '-=40vh',
-    duration: 1000,
+    translateY: '-=2vh',
+    duration: 6000,
     opacity: 1
   }
   const getLinkedIn = {
     targets: '#LinkedInLink',
-    translateX: '-=25vw',
-    duration: 1000,
+    translateX: '-=2vw',
+    duration: 6000,
     opacity: 1
   }
 
   mobileAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getProfile, '-=500').add(removeButton);
-  desktopAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getGithub, '-=500').add(getEmail).add(getLinkedIn, '-=500').add(removeButton, '-=1000')
+  desktopAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName).add(getGithub, '-=3000').add(getEmail, '-=6000').add(getLinkedIn, '-=6000').add(removeButton, '-=6000')
 
 
 
@@ -103,17 +103,22 @@ $(document).ready(function() {
     mobileAnim.finished.then(function() {
      $('#play-button').off();
     });
-  } else {
-    desktopAnim.play();
+    } else {
+      desktopAnim.play();
     
-    desktopAnim.finished.then(function() {
-     $('#play-button').off();
-    });
-  }
+      desktopAnim.finished.then(function() {
+      $('#play-button').off();
+      });
+    }
   });
 
-  $('#username-heading').hover(function() {
-    console.log(desktopAnim);
+  /*
+   * Change opacity on hovering over links 
+   */
+  $('.show-up').hover(function() {
+    $(this).css("opacity", 0.7);
+  }, function() {
+    $(this).css("opacity", 1);
   });
 
 });
