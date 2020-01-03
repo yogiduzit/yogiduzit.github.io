@@ -103,4 +103,9 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+# Static Project
+package.json
+package-lock.json
+app.js
+
 # End of https://www.gitignore.io/api/git,node
