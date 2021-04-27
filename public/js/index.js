@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
   let count = 0;
-  
+
   // Play-Button fading in
   const nameAnim = anime.timeline({
     loop: false,
@@ -35,7 +35,7 @@ $(document).ready(function() {
     targets: '.navlinks',
     easing: 'linear',
     opacity: {
-      value: [0,1],
+      value: [0, 1],
       duration: 3000,
       easing: 'linear'
     },
@@ -45,15 +45,15 @@ $(document).ready(function() {
     },
     duration: 3000,
   }
-    const bringName = {
+  const bringName = {
     targets: ['#username-heading', '.alpha', '#junior-dev'],
     duration: 3000,
     opacity: {
-      value: 1, 
+      value: 1,
       duration: 3000,
       easing: 'linear'
     },
-    
+
   }
   const removeButton = {
     targets: '#play-button',
@@ -92,22 +92,18 @@ $(document).ready(function() {
   mobileAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName, '-=3000').add(getProfile, '-=500').add(removeButton);
   desktopAnim.add(rotatePlayButton).add(bringNavDown, '-=3000').add(bringName).add(getGithub, '-=3000').add(getEmail, '-=6000').add(getLinkedIn, '-=6000').add(removeButton, '-=6000')
 
-
-
-
-
-  $('#play-button').on('click', function() {
+  $('#play-button').on('click', function () {
     if (window.outerWidth <= 1024) {
-    mobileAnim.play();
-    
-    mobileAnim.finished.then(function() {
-     $('#play-button').off();
-    });
+      mobileAnim.play();
+
+      mobileAnim.finished.then(function () {
+        $('#play-button').off();
+      });
     } else {
       desktopAnim.play();
-    
-      desktopAnim.finished.then(function() {
-      $('#play-button').off();
+
+      desktopAnim.finished.then(function () {
+        $('#play-button').off();
       });
     }
   });
@@ -115,9 +111,9 @@ $(document).ready(function() {
   /*
    * Change opacity on hovering over links 
    */
-  $('.show-up').hover(function() {
+  $('.show-up').hover(function () {
     $(this).css("opacity", 0.7);
-  }, function() {
+  }, function () {
     $(this).css("opacity", 1);
   });
 
