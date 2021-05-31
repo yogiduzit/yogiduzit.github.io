@@ -146,6 +146,7 @@ img.carousel-img {
   }
   .about-project {
     width: 40%;
+    text-align: left;
   }
   .carousel-img {
     height: 450px;
@@ -159,6 +160,9 @@ img.carousel-img {
     height: 50vw;
   }
   .container-1 {
+    flex-flow: row-reverse nowrap;
+  }
+  .container-3 {
     flex-flow: row-reverse nowrap;
   }
   .container-0 .about-project {
