@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  background: url("../img/background.jpg") repeat;
+  background: #d19900 repeat;
   background-size: contain;
 }
 main {
