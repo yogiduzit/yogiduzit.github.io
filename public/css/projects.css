@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background: url("../img/background.jpg") repeat;
+  background: #d19900 repeat;
 }
 a, a:hover {
   text-decoration: none;
@@ -20,7 +20,7 @@ section.main-container {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-around;
-  margin: 40px 0;
+  margin: 10vh 0;
 }
 .navbar-nav {
   align-items: flex-end;
@@ -55,7 +55,7 @@ img.carousel-img {
   display: grid;
   grid-template-columns: repeat(6, 12.25vmin);
   grid-template-rows: repeat(6, 7vmin);
-  grid-gap: 10px;
+  gap: 10px;
   padding: 20px;
 }
 .gallery-img {
@@ -98,6 +98,36 @@ img.carousel-img {
   grid-column-end: 7;
   grid-row-start: 3;
   grid-row-end: 5;
+}
+.gallery-book-a-room {
+  display: grid;
+  grid-template-columns: repeat(2, 25vmin);
+  grid-template-rows: repeat(2, 35vmin);
+  gap: 10px;
+}
+.gallery-book-a-room > .gallery-image-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.gallery-book-a-room > .gallery-image-2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.gallery-book-a-room > .gallery-image-3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.gallery-book-a-room > .gallery-image-4 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 @media screen and (min-width: 319px) and (max-width: 479px) {
   .video {
