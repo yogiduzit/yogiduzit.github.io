@@ -8,6 +8,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 const PATH_TO_FILE = {
   '/': 'index',
+  '/experience': 'experience',
   '/projects': 'projects',
   '/resume': 'resume'
 };
