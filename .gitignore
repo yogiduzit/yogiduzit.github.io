@@ -171,5 +171,6 @@ dist/
 # Temporary folders
 tmp/
 temp/
+something/
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,node,git
